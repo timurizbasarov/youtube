@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    background-color: #ff0000; /* YouTube red */
+    height: 60px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .burger-menu span {
+    background-color: #fff;
+    height: 3px;
+    width: 100%;
+    display: block;
+    border-radius: 3px;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+  
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .burger-menu {
+      display: flex;
+    }
+  
+    .menu {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #ff0000; /* YouTube red */
+      flex-direction: column;
+    }
+  
+    .menu a {
+      margin: 10px 0;
+      padding: 10px 20px;
+      border-bottom: 1px solid #fff;
+    }
+  
+    input[type="checkbox"] {
+      display: none;
+    }
+  
+    input[type="checkbox"]:checked ~ .menu {
+      display: flex;
+    }
+  }
+  
